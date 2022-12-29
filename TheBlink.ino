@@ -4,10 +4,10 @@
 #include "FadeEffect.h"
 #include "BlinkScheduler.h"
 
-int ledPinsGreen[] = {3, 6};
-int ledPinsRed[] = {5, 9};
-LedService ledServiceGreen(ledPinsGreen, 2);
-LedService ledServiceRed(ledPinsRed, 2);
+int ledPinGreen = 3;
+int ledPinRed = 5;
+LedService ledServiceGreen(ledPinGreen);
+LedService ledServiceRed(ledPinRed);
 LedService ledServiceArray[] = {ledServiceGreen, ledServiceRed};
 
 JustBlink blinkSlow;

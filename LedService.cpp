@@ -1,20 +1,12 @@
 #include "LedService.h"
 
-LedService::LedService(int pinArray[], int size) {
-  this->pinArray = pinArray;
-  this->size = size;
+LedService::LedService(int pin) {
+  this->pin = pin;
   init();
 }
 
 void LedService::init() {
-  // Reading the values using pointers
-  int *ptr = pinArray;
-  int pin = *ptr;
-  for (int i = 0; i < size; i++){
 	pinMode(pin, OUTPUT);
-	ptr++;
-	pin = *ptr;
-  }
 }
 
 void LedService::on() {
@@ -26,11 +18,5 @@ void LedService::off() {
 }
 
 void LedService::light(int brightness) {
-  int *ptr = pinArray;
-  int pin = *ptr;
-  for (int i = 0; i < size; i++){
 	analogWrite(pin, brightness);
-	ptr++;
-	pin = *ptr;
-  }
 }

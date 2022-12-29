@@ -6,11 +6,10 @@
 class LedService {
 	
   private:
-    int *pinArray;
-    int size;
+    int pin;
 
   public:
-    LedService(int pinArray[], int size);
+    LedService(int pin);
     void init();
     void on();
     void off();    
