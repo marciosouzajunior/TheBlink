@@ -1,8 +1,6 @@
 # TheBlink
 Arduino Christmas Lights Controller
 
-This project
-
 <img src="https://github.com/marciosouzajunior/TheBlink/blob/main/project.jpeg">
 
 ## Project structure
